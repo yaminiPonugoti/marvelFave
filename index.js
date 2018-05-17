@@ -1,4 +1,4 @@
-const form = document.querySelector('#userForm')
+const form = document.querySelector('#moviesForm')
 
 function renderColor(color) {
   const colorDiv = document.createElement('div')
@@ -8,11 +8,11 @@ function renderColor(color) {
   return colorDiv
 }
 
-function renderListItem(label, value) {
+function renderListItem(value) {
   const item = document.createElement('li')
 
-  const term = document.createElement('dt')
-  term.textContent = label
+  //const term = document.createElement('dt')
+  //term.textContent = ''
 
   const description = document.createElement('dd')
 
@@ -22,7 +22,7 @@ function renderListItem(label, value) {
     description.textContent += value
   }
 
-  item.appendChild(term)
+  //item.appendChild(term)
   item.appendChild(description)
   return item
 }
@@ -31,7 +31,7 @@ function renderList(data) {
   const list = document.createElement('dl')
   const labels = Object.keys(data)
   labels.forEach(label => {
-    const item = renderListItem(label, data[label])
+    const item = renderListItem(data[label])
     list.appendChild(item)
   })
   return list

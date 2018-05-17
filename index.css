@@ -6,7 +6,7 @@ main{
     display: flex;
     justify-content: space-around;
 }
-#userForm{
+#moviesForm{
     background-color: #eeeeee9c;
     padding: 1rem;
     border: 1px solid #e3e3e3;
