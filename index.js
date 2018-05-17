@@ -1,5 +1,5 @@
 const form = document.querySelector('#moviesForm')
-
+var movieNames = []
 function renderColor(color) {
   const colorDiv = document.createElement('div')
   colorDiv.style.backgroundColor = color
@@ -15,13 +15,14 @@ function renderListItem(value) {
   //term.textContent = ''
 
   const description = document.createElement('dd')
-
+  //console.log(movieNames)
   try {
     description.appendChild(value)
   } catch(e) {
     description.textContent += value
   }
-
+  movieNames.push(item)
+  console.log(movieNames)
   //item.appendChild(term)
   item.appendChild(description)
   return item
